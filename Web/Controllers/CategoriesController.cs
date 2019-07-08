@@ -72,7 +72,7 @@ namespace Web.Controllers
 		}
 
 		[HttpPost]
-		[ValidateAntiForgeryToken]]
+		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Create([Bind("Id,Name,UserId")] Category category)
 		{
 			var authorizationResult = await _authorizationService.AuthorizeAsync(User, category, new InsertCategoryRequirement());
